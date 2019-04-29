@@ -13,8 +13,8 @@ Basically search Engine to search top 20 food reviews based on matches on query 
 
 
  - ## Clone Repository
-	 - `git clone <<this repository>>` 
-	 - `cd tasty-search`
+	 - `git clone https://github.com/AruGowda/Tasty_Search.git` 
+	 - `cd Tasty_Search`
 	 - `git checkout master`
  -  ## Start Server
 	 - `python tasty-search.py`
