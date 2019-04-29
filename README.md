@@ -13,7 +13,7 @@ Basically search Engine to search top 20 food reviews based on matches on query 
 
 
  - ## Clone Repository
-	 - `git clone` 
+	 - `git clone <<this repository>>` 
 	 - `cd tasty-search`
 	 - `git checkout master`
  -  ## Start Server
