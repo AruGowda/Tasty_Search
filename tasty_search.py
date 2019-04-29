@@ -29,7 +29,7 @@ def pre_process_food_review_data():
     reads raw text file and generates dict of food reviews
     """
     each_food_review_document = {}
-    with open('/home/local/PALYAM/rdarshan/Downloads/foods.txt') as f:
+    with open('foods.txt') as f:
         for each_line in f:
             try:
                 each_line = each_line.strip()
