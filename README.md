@@ -17,7 +17,7 @@ Basically search Engine to search top 20 food reviews based on matches on query 
 	 - `cd Tasty_Search`
 	 - `git checkout master`
  -  ## Start Server
-	 - `python tasty-search.py`
+	 - `python tasty_search.py`
  
 # Enter query tokens space separated as show in figure
 
