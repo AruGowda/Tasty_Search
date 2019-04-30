@@ -1,6 +1,7 @@
 import SimpleHTTPServer
 import SocketServer
 from urlparse import urlparse, parse_qs
+import os
 
 PORT = 8001
 RANDOM_REVIEWS_TO_PICK = 50000
@@ -83,9 +84,12 @@ class HTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    pre_process_food_review_data()
-    random_food_reviews = pre_processed_food_review_data[:RANDOM_REVIEWS_TO_PICK]
-    Handler = HTTPRequestHandler
-    httpd = SocketServer.TCPServer(("", PORT), Handler)
-    print "Running on http://localhost:{}/".format(PORT)
-    httpd.serve_forever()
+    if os.path.isfile('foods.txt'):
+        pre_process_food_review_data()
+        random_food_reviews = pre_processed_food_review_data[:RANDOM_REVIEWS_TO_PICK]
+        Handler = HTTPRequestHandler
+        httpd = SocketServer.TCPServer(("", PORT), Handler)
+        print "Running on http://localhost:{}/".format(PORT)
+        httpd.serve_forever()
+    else:
+        print "Pre-requisites foods.txt file not found, hence aborting"
